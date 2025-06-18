@@ -1,0 +1,180 @@
+/* style.css */
+
+/* Body and container styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(270deg, hsl(200, 70%, 30%), hsl(240, 80%, 40%), hsl(200, 70%, 30%));
+  background-size: 600% 600%;
+  animation: gradientShift 20s ease infinite;
+  color: white;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#gameContainer {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 30px #00f6ff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #00eaff;
+  text-shadow: 0 0 15px #00eaff;
+}
+
+#levelDisplay, #turnDisplay, #scoreDisplay, #timerDisplay, #message {
+  text-align: center;
+  margin: 8px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 0 0 5px black;
+}
+
+.player-indicator {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 6px;
+  box-shadow: 0 0 10px #fff;
+}
+
+.player-indicator.red {
+  background: #ff3b3b;
+  box-shadow: 0 0 10px #ff3b3b;
+}
+
+.player-indicator.yellow {
+  background: #ffef3b;
+  box-shadow: 0 0 10px #ffef3b;
+}
+
+.player-indicator.green {
+  background: #3bff4e;
+  box-shadow: 0 0 10px #3bff4e;
+}
+
+.player-indicator.blue {
+  background: #3b71ff;
+  box-shadow: 0 0 10px #3b71ff;
+}
+
+.player-indicator.purple {
+  background: #a33bff;
+  box-shadow: 0 0 10px #a33bff;
+}
+
+/* Board grid */
+#board {
+  display: grid;
+  gap: 6px;
+  margin-top: 20px;
+  user-select: none;
+}
+
+/* Cells */
+.cell {
+  width: 50px;
+  height: 50px;
+  background: #111;
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px #000;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+}
+
+.cell:hover {
+  background: #222;
+}
+
+/* Disc inside cell */
+.disc {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  margin: 2px auto;
+  box-shadow: 0 0 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.disc.red {
+  background: #ff3b3b;
+  box-shadow: 0 0 10px #ff3b3b;
+}
+
+.disc.yellow {
+  background: #ffef3b;
+  box-shadow: 0 0 10px #ffef3b;
+}
+
+.disc.green {
+  background: #3bff4e;
+  box-shadow: 0 0 10px #3bff4e;
+}
+
+.disc.blue {
+  background: #3b71ff;
+  box-shadow: 0 0 10px #3b71ff;
+}
+
+.disc.purple {
+  background: #a33bff;
+  box-shadow: 0 0 10px #a33bff;
+}
+
+/* Buttons */
+.button-container {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#resetBtn, #resetLevelBtn, #muteBtn {
+  cursor: pointer;
+  background-color: #ffba08;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ffba08;
+  transition: background-color 0.3s ease;
+  margin: 6px;
+}
+
+#resetBtn:hover, #resetLevelBtn:hover, #muteBtn:hover {
+  background-color: #f4a300;
+}
+
+/* Sparkle canvas */
+#sparkleCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  display: none;
+}

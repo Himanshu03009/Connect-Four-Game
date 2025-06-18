@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multi-Level Connect Four</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="sparkleCanvas"></canvas>
+
+  <div id="gameContainer">
+    <h1>Multi-Level Connect Four</h1>
+    <div id="levelDisplay"></div>
+    <div id="turnDisplay">Player Turn: <span id="currentPlayerColor" class="player-indicator"></span></div>
+    <div id="scoreDisplay"></div>
+    <div id="timerDisplay"></div>
+    <div id="message"></div>
+    <div id="board"></div>
+
+    <!-- Buttons -->
+    <div class="button-container">
+      <button id="resetBtn">🔄 Reset Game</button>
+      <button id="resetLevelBtn">⏪ Reset Level</button>
+      <button id="muteBtn">🔊 Mute</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
